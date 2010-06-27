@@ -5,3 +5,4 @@ config/database.yml
 .DS_Store
 public/system/files/*
 public/uploads/*
+*.sqlite3
