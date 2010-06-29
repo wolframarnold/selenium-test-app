@@ -9,7 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100627052034) do
+ActiveRecord::Schema.define(:version => 20100629052829) do
+
+  create_table "suggestions", :force => true do |t|
+    t.integer "user_id", :null => false
+    t.string  "title",   :null => false
+    t.string  "rating"
+    t.boolean "public"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"

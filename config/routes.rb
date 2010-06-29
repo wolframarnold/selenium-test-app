@@ -1,6 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :users
-  map.resources :suggestions
+  map.resources :users do |user|
+    user.resources :suggestions, :active_scaffold => true
+  end
 
   map.root :controller => :users, :action => :new
   # The priority is based upon order of creation: first created -> highest priority.
