@@ -3,7 +3,7 @@ class SuggestionsController < ApplicationController
   active_scaffold :suggestion do |config|
     config.columns = [:title, :rating, :public]
     config.columns[:rating].form_ui = :select
-    config.columns[:rating].options = {:options => [['Must have right now', 'urgent'], ['Can wait til tomorrow', 'moderate'], ['When you get to it', 'later']]}
+    config.columns[:rating].options = {:options => [['urgent'], ['moderate'], ['later']]}
     config.columns[:public].form_ui = :checkbox
   end
 
