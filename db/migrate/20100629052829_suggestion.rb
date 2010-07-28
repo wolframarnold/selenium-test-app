@@ -4,7 +4,7 @@ class Suggestion < ActiveRecord::Migration
       t.belongs_to :user, :null => false
       t.string :title, :null => false
       t.string :rating
-      t.boolean :is_public, :default => 0
+      t.boolean :is_public, :default => false
     end
   end
 
