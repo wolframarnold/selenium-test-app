@@ -1,10 +1,10 @@
 class SuggestionsController < ApplicationController
 
   active_scaffold :suggestion do |config|
-    config.columns = [:title, :rating, :public]
+    config.columns = [:title, :rating, :is_public]
     config.columns[:rating].form_ui = :select
     config.columns[:rating].options = {:options => [['urgent'], ['moderate'], ['later']]}
-    config.columns[:public].form_ui = :checkbox
+    config.columns[:is_public].form_ui = :checkbox
   end
 
   private

@@ -12,10 +12,10 @@
 ActiveRecord::Schema.define(:version => 20100629052829) do
 
   create_table "suggestions", :force => true do |t|
-    t.integer "user_id",                    :null => false
-    t.string  "title",                      :null => false
+    t.integer "user_id",                      :null => false
+    t.string  "title",                        :null => false
     t.string  "rating"
-    t.boolean "public",  :default => false
+    t.boolean "is_public", :default => false
   end
 
   create_table "users", :force => true do |t|
